@@ -1,17 +1,22 @@
-import { useState } from 'react'
 import './App.css'
+import Header from './Components/Header/Header';
+import Form from './Components/Form/Form';
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h1>Hillel</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
+    <> 
+      <div className="wrapper">
+        <Header/>
+      <main className="content">
+        <h1 className="title">The best pizza. <br />
+        <span className="text-yellow">Straight out of the oven, straight to you.</span>
+      </h1>
+        <p className="sub-title">👋 Welcome! Please start by telling us your name:</p>
+      <Form/>
+      </main>
+        
+    </div>
     </>
   )
 }
