@@ -1,0 +1,49 @@
+ul{
+  display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.pizza {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 8px;
+
+  width: 365px;
+  margin-bottom: 16px;
+  outline: 1px solid #eab308;
+  border-radius: 20px;
+
+}
+
+.pizza__image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.pizza__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.pizza__name { 
+  font-weight: 500;
+}
+
+.pizza__ingredients {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.pizza__actions {
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+}
+
+.pizza__price {
+  font-size: 14px;
+}

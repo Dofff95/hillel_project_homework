@@ -1,6 +1,7 @@
 import './App.css'
 import Header from './Components/Header/Header';
 import Form from './Components/Form/Form';
+import Menu from './Components/Menu/Menu';
 
 
 function App() {
@@ -15,8 +16,9 @@ function App() {
         <p className="sub-title">👋 Welcome! Please start by telling us your name:</p>
       <Form/>
       </main>
-        
     </div>
+    <h2>Our Menu</h2>
+    <Menu/>
     </>
   )
 }
