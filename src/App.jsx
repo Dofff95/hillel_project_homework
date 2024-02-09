@@ -2,6 +2,8 @@ import './App.css'
 import Header from './Components/Header/Header';
 import Form from './Components/Form/Form';
 import Menu from './Components/Menu/Menu';
+import Counter from './Components/Counter/Counter';
+
 
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
       <Form/>
       </main>
     </div>
+    <Counter/>
     <h2>Our Menu</h2>
     <Menu/>
     </>
