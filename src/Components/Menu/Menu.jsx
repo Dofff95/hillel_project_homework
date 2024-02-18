@@ -1,7 +1,16 @@
 import pizzas from "./data.js";
 import CSS from "./Menu.module.css"
-const Menu = () => (   
-    <ul>
+import PizzasCounter from './../PizzasCounter/PizzasCounter';
+import { useState } from "react";
+
+
+// зробити сет коунт як пропси з цього елементу
+
+const Menu = () => {
+     const [count, setCount] = useState(0);
+
+     return (
+        <ul>
         {pizzas.map((pizza) => (
             <li key={pizza.id} className={CSS.pizza}>
                  <img src={pizza.imageUrl} className={CSS.pizza__image}/>
@@ -12,8 +21,8 @@ const Menu = () => (
                 {pizza.soldOut == false 
                     ?   <div className={CSS.pizza__actions}>
                         <p className={CSS.pizza__price}>${pizza.unitPrice}</p>
-                        <button className={CSS.button}>Add to cart</button>  
-                        </div> 
+                         <PizzasCounter count={count} />
+                        </div>
                     :   <div className={CSS.pizza__actions}>
                         <p className={CSS.pizza__price}>Sold out</p> 
                         </div>
@@ -23,7 +32,10 @@ const Menu = () => (
         )              
         )}
     </ul>
+     )
+}   
         
-)
+        
+        
 export default Menu
 
